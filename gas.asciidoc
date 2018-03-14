@@ -10,7 +10,7 @@ To each operation, a fixed amount of gas is assigned. Some examples from the Eth
 
 Gas is a crucial component of Ethereum's defense against denial-of-service attacks. In order to prevent accidental or malicious infinite loops or other computational wastage in the network, the initiator of each transaction is required to set a limit to the amount they are willing to spend on gas. The gas system therefore decentivizes attackers from sending spam transactions, as they must pay proportionately for the computational, bandwidth, and storage resource that they consume.
 
-=== Halting Problem
+==== Halting Problem
 
 The idea of transaction fees and accounting seem practical, though you might wonder why Ethereum requires gas in the first place. Gas is pivotal, as it not only attends to the halting problem, but is also critical for safety and liveness. What is the halting problem, safety, and liveness, and why should you care?
 
@@ -42,7 +42,7 @@ While the **gas cost** is a measure of operational steps performed in the EVM, t
 
 This amount is deducted from the sender's account at the start of the transaction execution. Instead of "total gas used", the sender is to set a **gas limit** that should be sufficient to cover the amount of gas required to perform the transaction.
 
-=== Gas cost limit and running out of gas
+==== Gas cost limit and running out of gas
 
 Before sending a transaction, senders must specify a **gas limit** - the maximum amount of gas they are willing to buy. They must also specify the **gas price** - the price in ether they are willing to pay for each unit of gas.
 
@@ -58,7 +58,7 @@ In which case:
 
 `excess gas * gasprice` ether is refunded to the sender
 
-=== Gas price and transaction prioritization
+==== Gas price and transaction prioritization
 
 Gas price is the amount in ether that the transaction sender is willing to pay for each unit of gas used. The miner who mines the next block gets to decide which transactions to include. Since gas price is factored into the transaction fee they will receive as a reward, they are more likely to include transactions with highest gas prices first. If the sender sets the gas price too low, they may have to wait a long time before their transaction makes it into a block.
 
